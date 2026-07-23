@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  --font-display: "Cormorant Garamond", serif;
+  --font-editorial: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "Space Mono", monospace;
+
+  --color-warm-bg: #050807;
+  --color-ink: #F4EFE6;
+  --color-accent: #D4AF37;
+  --color-copper: #D97E4A;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050807;
+}
+::-webkit-scrollbar-thumb {
+  background: #1C2420;
+  border-radius: 3px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Glassmorphism glass card */
+.glass-card {
+  background: rgba(13, 20, 17, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.glass-card:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+}
+
+/* Arabesque Geometric Grid Texture */
+.arabesque-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgba(212, 175, 55, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Glowing ambient backlights */
+.gold-glow-orb {
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(212, 175, 55, 0) 70%);
+  filter: blur(40px);
+}
+
+.emerald-glow-orb {
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.06) 0%, rgba(16, 185, 129, 0) 75%);
+  filter: blur(50px);
+}
+
+/* Custom animations and utilities */
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow: 0 0 4px rgba(212, 175, 55, 0.3), 0 0 12px rgba(212, 175, 55, 0.15);
+  }
+  50% {
+    text-shadow: 0 0 12px rgba(212, 175, 55, 0.7), 0 0 24px rgba(212, 175, 55, 0.4);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+@keyframes floatEmbers {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-80px) scale(0.8) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.glowing-ember {
+  animation: floatEmbers 6s infinite linear;
+}
+
+/* Gold Border Glow on Hover */
+.gold-glow-hover {
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.gold-glow-hover:hover {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+  border-color: #D4AF37;
+}
+
+.gold-text-glow {
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+}

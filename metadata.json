@@ -1,0 +1,8 @@
+{
+  "name": "Fine Dine Restaurant - Mughlai & Multi-Cuisine Lounge",
+  "description": "Premium Mughlai, Tandoor & Fine Multi-Cuisine Lounge near ABC Square, XYZ, Bhubaneswar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
